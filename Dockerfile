@@ -12,7 +12,7 @@ ENV PYTHONUNBUFFERED=1
 
 # Add only what's needed
 COPY README.md ./README.md
-COPY main.py ./main.py
+
 COPY entrypoint.sh ./entrypoint.sh
 
 RUN chown -R app_user:app /app
@@ -23,6 +23,8 @@ RUN --mount=type=cache,target=/root/.cache/uv \
     --mount=type=bind,source=pyproject.toml,target=pyproject.toml \
     --mount=type=bind,source=.python-version,target=.python-version \
     uv sync --locked --no-dev --no-cache
+
+COPY main.py ./main.py
 
 EXPOSE 8000
 
