@@ -4,3 +4,6 @@ build/
 .venv
 .env
 *.pyc
+.terraform
+.terraform.lock*
+*.tfstate*
