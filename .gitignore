@@ -7,3 +7,4 @@ build/
 .terraform
 .terraform.lock*
 *.tfstate*
+*.auto.tfvars

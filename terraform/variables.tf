@@ -1,3 +1,9 @@
+variable "project_id" {
+  type        = string
+  default     = ""
+  description = "GCP Project id, put your own project id here"
+}
+
 variable "db_instance_name" {
   type        = string
   default     = "swapi-test"
