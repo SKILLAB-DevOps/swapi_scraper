@@ -35,4 +35,6 @@ module "cloud_run" {
   traffic_percent = 100
   public          = true
   invoker_members = []
+
+  depends_on = [ module.db ]
 }
